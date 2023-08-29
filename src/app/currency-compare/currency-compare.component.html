@@ -1,0 +1,96 @@
+<!-- <header class="logo"></header> -->
+<div
+  class="wrapper"
+  *ngIf="(appStateService.activeMode$ | async) === 'Compare'"
+>
+  <div class="colcetion">mmm</div>
+  <form>
+    <div class="Switch_CC">
+      <button class="switch-button" (click)="setActiveButton('Convert')">
+        Convert
+      </button>
+      <button
+        class="switch-button"
+        (click)="setActiveButton('Compare')"
+        [routerLink]="['/currency-compare']"
+        routerLinkActive="active"
+      >
+        Compare
+      </button>
+    </div>
+    <div class="groups">
+      <div class="group-1">
+        <div class="field-1">
+          <div class="amount">
+            <p class="text">Amount</p>
+            <div class="input-amount input-field" style="width: 190px">
+              <input
+                class="amount-input"
+                type="number"
+                [(ngModel)]="amount"
+                name="amount"
+                style="width: 190px"
+              />
+            </div>
+          </div>
+          <div class="select-box">
+            <div class="select-field">
+              <p class="text">From</p>
+              <app-currency-selector
+                #from
+                [selectorId]="'selectedFromCurrency'"
+                [changeCurrency]="selectFrom"
+              ></app-currency-selector>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-1">
+          <div class="select-box">
+            <p class="text-1">Target currency</p>
+
+            <app-currency-selector
+              #to
+              [selectorId]="'selectedFirstTargetCurrency'"
+              [changeCurrency]="select_to_one"
+            ></app-currency-selector>
+          </div>
+
+          <div class="select-box-2">
+            <p class="text-1">Target currency</p>
+
+            <app-currency-selector
+              #to
+              [selectorId]="'selectedSecondTargetCurrency'"
+              [changeCurrency]="select_to_two"
+            ></app-currency-selector>
+          </div>
+        </div>
+
+        <div class="field-2">
+          <div class="amount">
+            <input
+              class="amount-input"
+              type="text"
+              [(ngModel)]="convertedAmountFirstTarget"
+              [readonly]="true"
+              name="convertedAmountFirstTarget"
+              style="width: 190px"
+            />
+          </div>
+          <div class="amount-1">
+            <input
+              class="amount-input"
+              type="text"
+              [(ngModel)]="convertedAmountSecondTarget"
+              [readonly]="true"
+              name="convertedAmountSecondTarget"
+              style="width: 190px"
+            />
+          </div>
+        </div>
+      </div>
+      <button class="compare" (click)="compareCurrencies()">Compare</button>
+    </div>
+  </form>
+</div>

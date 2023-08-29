@@ -1,0 +1,45 @@
+@import "styles/mixins";
+@import "styles/default";
+@import "styles/loading";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import "currency-flags/dist/currency-flags.css";
+
+body {
+  width: 1440px;
+  height: 1024px;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  fill: linear-gradient(
+    180deg,
+    rgba(13, 13, 13, 0.4) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  min-height: 100vh;
+  background-image: url(../src/assets/header.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-position: center;
+  font-family: Montserrat;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.logo {
+  width: 307px;
+  height: 68.489px;
+  flex-shrink: 0;
+  background: url(./assets/logo.png), 50% / cover no-repeat;
+  margin-left: 15%;
+  margin-top: 4%;
+}
+::-webkit-scrollbar {
+  display: none;
+}

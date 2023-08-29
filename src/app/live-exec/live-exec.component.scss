@@ -1,0 +1,63 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.icon {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  margin: 10px;
+  border: 1px solid #b8b8b8;
+  border-radius: 50%;
+}
+.cur {
+  color: var(--greyscale-grey-400, #b8b8b8);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 19.921px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.ico {
+  width: 24px;
+}
+
+.icon-plus {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 15px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 75px;
+  width: 220px;
+  height: 50px;
+  color: #363636;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+}
+.ico-img {
+  width: 21px;
+}
+
+.rate-num {
+  color: var(--greyscale-grey-900, #121212);
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 29.881px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100px;
+}

@@ -1,0 +1,41 @@
+<div>
+  <div class="d-flex justify-content-between">
+    <h1 mat-dialog-title>My Favorites</h1>
+    <div>
+      <button mat-button mat-dialog-close type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+  </div>
+  <div>
+    <div *ngFor="let curr of currencyList">
+      <ul class="list-group list-group-flush m-0">
+        <li class="list-group-item">
+          <div class="d-flex border-bottom">
+            <div class="d-flex fs-5">
+              <img [src]="curr.flagUrl" class="m-2 icon" />
+            </div>
+            <div class="flex-grow-1 align-text-bottom px-4">
+              <div class="fs-6">{{ curr.name }}</div>
+              <div class="cur fs-8">CURRENCY</div>
+            </div>
+            <div
+              class="d-flex align-items-center custom-control custom-checkbox rounded"
+            >
+              <input
+                #checkBox
+                class="form-check-input custom-control-input"
+                type="checkbox"
+                id="checkboxNoLabel"
+                [checked]="isCurrencySelected(curr)"
+                value=""
+                aria-label="..."
+                (change)="onCheckboxChange(curr)"
+              />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+  </div>
+</div>
